@@ -1,4 +1,4 @@
-package br.com.gspicinini.vistoriaimoveis.ui;
+package ui;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -31,7 +31,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         btnProvas = new javax.swing.JButton();
         btnPilotos = new javax.swing.JButton();
         btnCircuitos = new javax.swing.JButton();
-        btnClassificacao = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
@@ -41,42 +40,40 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
 
-        btnEquipes.setText("EQUIPES");
+        btnEquipes.setText("VISTORIA");
         btnEquipes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEquipesActionPerformed(evt);
             }
         });
 
-        btnPaises.setText("PAISES");
+        btnPaises.setText("IMÓVEL");
         btnPaises.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPaisesActionPerformed(evt);
             }
         });
 
-        btnProvas.setText("PROVAS");
+        btnProvas.setText("FUNCIONÁRIO");
         btnProvas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProvasActionPerformed(evt);
             }
         });
 
-        btnPilotos.setText("PILOTOS");
+        btnPilotos.setText("ITENS VISTORIA");
         btnPilotos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPilotosActionPerformed(evt);
             }
         });
 
-        btnCircuitos.setText("CIRCUITOS");
+        btnCircuitos.setText("ITEM");
         btnCircuitos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCircuitosActionPerformed(evt);
             }
         });
-
-        btnClassificacao.setText("CLASSIFICAÇÃO");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,13 +81,11 @@ public class frmPrincipal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(103, 103, 103)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnProvas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnClassificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnProvas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnPaises, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -110,14 +105,13 @@ public class frmPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPilotos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProvas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnClassificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnProvas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Controle de Vistoria de Imóveis");
+        jLabel1.setText("Controle de Vistoria Imóveis");
         jLabel1.setToolTipText("");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setVerifyInputWhenFocusTarget(false);
@@ -148,38 +142,27 @@ public class frmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEquipesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipesActionPerformed
-        EquipeJDialog form = new EquipeJDialog(null, true);
-        form.setLocationRelativeTo(null);
-        form.setVisible(true);        
+               
     }//GEN-LAST:event_btnEquipesActionPerformed
 
     private void btnProvasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProvasActionPerformed
-        ProvaJDialog form = new ProvaJDialog(null, true);
-        form.setLocationRelativeTo(null);
-        form.setVisible(true);  
+       
     }//GEN-LAST:event_btnProvasActionPerformed
 
     private void btnPaisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaisesActionPerformed
-        PaisJDialog form = new PaisJDialog(null, true);
-        form.setLocationRelativeTo(null);
-        form.setVisible(true);
+       
     }//GEN-LAST:event_btnPaisesActionPerformed
 
     private void btnPilotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPilotosActionPerformed
-        PilotoJDialog form = new PilotoJDialog(null, true);
-        form.setLocationRelativeTo(null);
-        form.setVisible(true);
+     
     }//GEN-LAST:event_btnPilotosActionPerformed
 
     private void btnCircuitosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCircuitosActionPerformed
-        CircuitoJDialog form = new CircuitoJDialog(null, true);
-        form.setLocationRelativeTo(null);
-        form.setVisible(true);            // TODO add your handling code here:
+       // TODO add your handling code here:
     }//GEN-LAST:event_btnCircuitosActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCircuitos;
-    private javax.swing.JButton btnClassificacao;
     private javax.swing.JButton btnEquipes;
     private javax.swing.JButton btnPaises;
     private javax.swing.JButton btnPilotos;

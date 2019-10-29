@@ -68,13 +68,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="btnPilotos" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnProvas" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnClassificacao" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="btnPilotos" min="-2" pref="149" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btnProvas" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnPaises" min="-2" pref="100" max="-2" attributes="0"/>
@@ -101,7 +99,6 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnPilotos" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                       <Component id="btnProvas" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="btnClassificacao" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="31" max="32767" attributes="0"/>
               </Group>
@@ -111,7 +108,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnEquipes">
           <Properties>
-            <Property name="text" type="java.lang.String" value="EQUIPES"/>
+            <Property name="text" type="java.lang.String" value="VISTORIA"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEquipesActionPerformed"/>
@@ -119,7 +116,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnPaises">
           <Properties>
-            <Property name="text" type="java.lang.String" value="PAISES"/>
+            <Property name="text" type="java.lang.String" value="IM&#xd3;VEL"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPaisesActionPerformed"/>
@@ -127,7 +124,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnProvas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="PROVAS"/>
+            <Property name="text" type="java.lang.String" value="FUNCION&#xc1;RIO"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProvasActionPerformed"/>
@@ -135,7 +132,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnPilotos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="PILOTOS"/>
+            <Property name="text" type="java.lang.String" value="ITENS VISTORIA"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPilotosActionPerformed"/>
@@ -143,16 +140,11 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnCircuitos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CIRCUITOS"/>
+            <Property name="text" type="java.lang.String" value="ITEM"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCircuitosActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnClassificacao">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="CLASSIFICA&#xc7;&#xc3;O"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -162,7 +154,7 @@
           <Font name="Arial Black" size="18" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Controle de Vistoria de Im&#xf3;veis"/>
+        <Property name="text" type="java.lang.String" value="Controle de Vistoria Im&#xf3;veis"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
