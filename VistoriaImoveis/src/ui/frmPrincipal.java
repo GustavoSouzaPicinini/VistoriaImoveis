@@ -36,7 +36,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gerenciamento de Fórmula 1");
+        setTitle("Gerenciamento de Vistoria Imóveis");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
 
