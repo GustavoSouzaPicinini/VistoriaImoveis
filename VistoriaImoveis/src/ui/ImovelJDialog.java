@@ -60,7 +60,7 @@ public class ImovelJDialog extends javax.swing.JDialog {
         btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("ITEM");
+        setTitle("IMOVEL");
         setBounds(new java.awt.Rectangle(0, 15, 0, 0));
         setPreferredSize(new java.awt.Dimension(800, 490));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
