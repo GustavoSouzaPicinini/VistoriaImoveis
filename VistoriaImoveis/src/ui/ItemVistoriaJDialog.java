@@ -11,10 +11,9 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
 
 
+public class ItemVistoriaJDialog extends javax.swing.JDialog {
 
-public class FuncionarioJDialog extends javax.swing.JDialog {
-
-    public FuncionarioJDialog(java.awt.Frame parent, boolean modal) {
+    public ItemVistoriaJDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     
@@ -34,8 +33,17 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         txtID = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        txtEquipeID1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtEquipeNome1 = new javax.swing.JTextField();
+        btnBuscaEquipe1 = new javax.swing.JButton();
+        txtEquipeID2 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtEquipeNome2 = new javax.swing.JTextField();
+        btnBuscaEquipe2 = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
         btnNovo = new javax.swing.JButton();
         btnSalvar = new javax.swing.JButton();
@@ -43,28 +51,28 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
         btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("FUNCIONÁRIO");
+        setTitle("ITEM VISTORIA");
         setBounds(new java.awt.Rectangle(0, 15, 0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         JTablePilotos.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         JTablePilotos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "ID", "Nome"
+                "ID", "Vistoria", "Item", "Obs."
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -84,9 +92,9 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
             JTablePilotos.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 490, 215));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 780, 215));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(null), "REGISTRO FUNCIONÁRIO"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(null), "REGISTRO ITEM VISTORIA"));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtID.setToolTipText("");
@@ -94,18 +102,60 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
         txtID.setName("txtID"); // NOI18N
         jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 100, -1));
 
-        jLabel1.setText("Nome:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 70, 70, 20));
-
-        txtNome.setEnabled(false);
-        txtNome.setName("txtNome"); // NOI18N
-        jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 440, -1));
+        jLabel1.setText("Observação:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 110, 20));
 
         jLabel4.setText("ID:");
         jLabel4.setAlignmentX(1.0F);
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 20, 70, 20));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 490, 190));
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 750, -1));
+
+        txtEquipeID1.setEnabled(false);
+        txtEquipeID1.setName("nome"); // NOI18N
+        jPanel1.add(txtEquipeID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 100, -1));
+
+        jLabel5.setText("Vistoria:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 110, 20));
+
+        txtEquipeNome1.setEnabled(false);
+        txtEquipeNome1.setName("nome"); // NOI18N
+        jPanel1.add(txtEquipeNome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 330, -1));
+
+        btnBuscaEquipe1.setText("...");
+        btnBuscaEquipe1.setEnabled(false);
+        btnBuscaEquipe1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscaEquipe1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBuscaEquipe1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 50, -1));
+
+        txtEquipeID2.setEnabled(false);
+        txtEquipeID2.setName("nome"); // NOI18N
+        jPanel1.add(txtEquipeID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 100, -1));
+
+        jLabel6.setText("Item:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 110, 20));
+
+        txtEquipeNome2.setEnabled(false);
+        txtEquipeNome2.setName("nome"); // NOI18N
+        jPanel1.add(txtEquipeNome2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 330, -1));
+
+        btnBuscaEquipe2.setText("...");
+        btnBuscaEquipe2.setEnabled(false);
+        btnBuscaEquipe2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscaEquipe2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBuscaEquipe2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 50, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 780, 300));
         jPanel1.getAccessibleContext().setAccessibleName(" REGISTRO DE FUNCIONÁRIO");
 
         btnFechar.setText("Fechar");
@@ -116,7 +166,7 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
                 btnFecharActionPerformed(evt);
             }
         });
-        getContentPane().add(btnFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 100, 30));
+        getContentPane().add(btnFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 100, 30));
 
         btnNovo.setText("Novo");
         btnNovo.setActionCommand("btnNovo");
@@ -126,7 +176,7 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
                 btnNovoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 100, 30));
+        getContentPane().add(btnNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 100, 30));
 
         btnSalvar.setText("Salvar");
         btnSalvar.setActionCommand("btnAlterar");
@@ -137,7 +187,7 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
                 btnSalvarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 100, 30));
+        getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 100, 30));
 
         btnRemover.setText("Remover");
         btnRemover.setActionCommand("btnRemover");
@@ -148,7 +198,7 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
                 btnRemoverActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 100, 30));
+        getContentPane().add(btnRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 100, 30));
 
         btnCancelar.setText("Cancelar");
         btnCancelar.setActionCommand("btnImprimir");
@@ -159,7 +209,7 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
                 btnCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 100, 30));
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 560, 100, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -183,9 +233,19 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
       
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnBuscaEquipe1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaEquipe1ActionPerformed
+    
+    }//GEN-LAST:event_btnBuscaEquipe1ActionPerformed
+
+    private void btnBuscaEquipe2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaEquipe2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscaEquipe2ActionPerformed
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JTablePilotos;
+    private javax.swing.JButton btnBuscaEquipe1;
+    private javax.swing.JButton btnBuscaEquipe2;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovo;
@@ -193,10 +253,17 @@ public class FuncionarioJDialog extends javax.swing.JDialog {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField txtEquipeID1;
+    private javax.swing.JTextField txtEquipeID2;
+    private javax.swing.JTextField txtEquipeNome1;
+    private javax.swing.JTextField txtEquipeNome2;
     private javax.swing.JTextField txtID;
-    private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
     
 }
